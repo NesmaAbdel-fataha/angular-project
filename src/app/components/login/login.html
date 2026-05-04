@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center mb-4">Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" formControlName="username">
+          @if (f['username'].touched && f['username'].invalid) {
+            <div class="text-danger">
+              @if (f['username'].errors?.['required']) {
+                <small>Username is required</small>
+              }
+            </div>
+          }
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" formControlName="password">
+          @if (f['password'].touched && f['password'].invalid) {
+            <div class="text-danger">
+              @if (f['password'].errors?.['required']) {
+                <small>Password is required</small>
+              }
+            </div>
+          }
+        </div>
+        <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

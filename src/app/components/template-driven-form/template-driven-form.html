@@ -1,0 +1,120 @@
+<!-- <button (click)="AddnewUser()">Add New User</button> -->
+<div class="container"> 
+    <!-- <p>valid:{{fnameInput.valid}}</p>
+    <p>invalid:{{fnameInput.invalid}}</p>  
+    
+    <p>dirty:{{fnameInput.dirty}}</p>
+    <p>pirstine:{{fnameInput.pristine}}</p> 
+    
+    <p>touched:{{fnameInput.touched}}</p>
+    <p>untouched:{{fnameInput.untouched}}</p> //template referance -->
+    <form  (ngSubmit)="AddnewUser()" #userForm="ngForm">
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">First name</label>
+    <input type="text" class="form-control" #fnameInput="ngModel"
+    id="exampleInputEmail1" aria-describedby="emailHelp" minlength="2" [(ngModel)]="propUser.fname" name="fname" required [ngClass]="{'is-invalid': (fnameInput.dirty || fnameInput.touched) && fnameInput.invalid, 'is-valid': fnameInput.valid}">
+    <div id="emailHelp" class="form-text invalid-feedback">
+     @if(fnameInput.errors?.['required'] && (fnameInput.dirty || fnameInput.touched)){
+      <p>First name is required</p>
+     }
+     @if(fnameInput.errors?.['minlength'] && (fnameInput.dirty || fnameInput.touched)){
+      <p>First name must be at least 2 characters</p>
+     }
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Last name</label>
+    <input type="text" class="form-control" minlength="2" #lnameInput="ngModel" id="exampleInputPassword1" [(ngModel)]="propUser.lname" name="lname" required #LnameInput="ngModel" [ngClass]="{'is-invalid': (lnameInput.dirty || lnameInput.touched) && lnameInput.invalid, 'is-valid': lnameInput.valid}">
+  </div>
+  <div id="emailHelp" class="form-text invalid-feedback">
+     @if(LnameInput.errors?.['required'] && (LnameInput.dirty || LnameInput.touched)){
+      <p>Last name is required</p>
+     }
+     @if(LnameInput.errors?.['minlength'] && (LnameInput.dirty || LnameInput.touched)){
+      <p>Last name must be at least 2 characters</p>
+     }
+    </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+  <input type="email" class="form-control" #emailInput="ngModel"
+[(ngModel)]="propUser.email" name="email"
+required email
+[ngClass]="{
+  'is-invalid': (emailInput.dirty || emailInput.touched) && emailInput.invalid,
+  'is-valid': emailInput.valid
+}">
+
+<div class="form-text invalid-feedback">
+  @if(emailInput.errors?.['required'] && (emailInput.dirty || emailInput.touched)){
+    <p>Email is required</p>
+  }
+  @if(emailInput.errors?.['email'] && (emailInput.dirty || emailInput.touched)){
+    <p>Enter a valid email</p>
+  }
+</div>
+  </div>
+  <div class="mb-3">
+   <div class="mb-3">
+  <label for="exampleInputPassword1" class="form-label">Password</label>
+
+  <input type="password"
+    class="form-control"
+    id="exampleInputPassword1"
+    #passwordInput="ngModel"
+    [(ngModel)]="propUser.password"
+    name="password"
+    required
+    minlength="6"
+
+    [ngClass]="{
+      'is-invalid': (passwordInput.dirty || passwordInput.touched) && passwordInput.invalid,
+      'is-valid': passwordInput.valid
+    }"
+  >
+
+  <div class="form-text invalid-feedback">
+
+    @if(passwordInput.errors?.['required'] && (passwordInput.dirty || passwordInput.touched)){
+      <p>Password is required</p>
+    }
+
+    @if(passwordInput.errors?.['minlength'] && (passwordInput.dirty || passwordInput.touched)){
+      <p>Password must be at least 6 characters</p>
+    }
+
+  </div>
+</div>
+<div class="mb-3">
+  <label class="form-label">Confirm Password</label>
+
+  <input type="password" class="form-control"
+  #confirmPasswordInput="ngModel"
+  [(ngModel)]="confirmPassword"
+  name="confirmPassword"
+  required
+  [ngClass]="{
+    'is-invalid': (confirmPasswordInput.dirty || confirmPasswordInput.touched) &&
+                  (confirmPasswordInput.invalid || confirmPassword !== propUser.password),
+    'is-valid': confirmPasswordInput.valid && confirmPassword === propUser.password
+  }">
+</div>
+<div class="form-text invalid-feedback">
+
+  @if(confirmPasswordInput.errors?.['required'] && (confirmPasswordInput.dirty || confirmPasswordInput.touched)){
+    <p>Confirm password is required</p>
+  }
+
+  @if(confirmPassword !== propUser.password && confirmPasswordInput.touched){
+    <p>Passwords do not match</p>
+  }
+
+</div>
+</div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" [disabled]="userForm.invalid" class="btn btn-success w-100">Submit</button>
+</form>
+
+</div>

@@ -1,0 +1,65 @@
+<div class="container">
+<div class="row">
+<div class="col-4">
+    <img [src]="productData?.productimgUrl" class="img-thumbnail" alt="">
+</div>
+<div class="col-8 mt-5">
+<h2>{{productData?.productName}}</h2>
+<h3>{{productData?.productPrice}}</h3>
+<p>{{productData?.productDetails}}</p>
+<p>Quantity : {{productData?.productQuantity}}</p>
+</div>
+
+<button class="btn btn-primary" (click)="goBack()">go Back</button>
+</div>
+
+<!-- <div class="d-flex flex-column align-items-center mt-5">
+  <div class="mb-3">
+    <span class="me-3">Product {{ currentIndex >= 0 ? currentIndex + 1 : 0 }} of {{ arrOfIds.length }}</span>
+    @if(arrOfIds.length){
+      <span>(ID: {{ currentId }})</span>
+    }
+  </div>
+  <div class="btn-group" role="group">
+    <button class="btn btn-light" type="button" [disabled]="currentIndex <= 0" (click)="goPrev()">
+      <i class="fa-solid fa-angle-left"></i> Previous
+    </button>
+    <button class="btn btn-light" type="button" [disabled]="currentIndex === arrOfIds.length - 1 || currentIndex < 0" (click)="goNext()">
+      Next <i class="fa-solid fa-angle-right"></i>
+    </button>
+  </div>
+</div> -->
+<div class="d-flex flex-column align-items-center mt-5">
+
+  <div class="mb-3">
+    <span class="me-3">
+      Product {{ currentIndex + 1 }} of {{ arrOfIds.length }}
+    </span>
+
+    @if(arrOfIds.length){
+      <span>(ID: {{ currentId }})</span>
+    }
+  </div>
+
+  <div class="btn-group" role="group">
+
+    <button 
+      class="btn btn-light" 
+      type="button" 
+      [disabled]="currentIndex <= 0" 
+      (click)="goPrev()">
+      <i class="fa-solid fa-angle-left"></i> Previous
+    </button>
+
+    <button 
+      class="btn btn-light" 
+      type="button" 
+      [disabled]="currentIndex >= arrOfIds.length - 1" 
+      (click)="goNext()">
+      Next <i class="fa-solid fa-angle-right"></i>
+    </button>
+
+  </div>
+
+</div>
+</div>

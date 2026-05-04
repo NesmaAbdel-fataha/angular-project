@@ -1,0 +1,109 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productName": "PIXPRO FZ55-RD 16MP CMOS Sensor Digital Camera 5X Optical Zoom 28mm Wide Angl",
+      "productQuantity": 6,
+      "productDetails": "loremmmCamera...",
+      "productPrice": 12000,
+      "catId": 2,
+      "productimgUrl": "https://f.nooncdn.com/p/pnsku/N70169880V/45/_/1764242398/285a54f6-256c-442e-a2e8-e766bfdfd767.jpg?width=800"
+    },
+    {
+      "id": "2",
+      "productName": "Z 5 Mirrorless Digital Camera With 24-50mm Lens",
+      "productQuantity": 2,
+      "productDetails": "loremmmCamera...",
+      "productPrice": 12000,
+      "catId": 2,
+      "productimgUrl": "https://f.nooncdn.com/p/v1669388522/N48466580A_1.jpg?width=800"
+    },
+    {
+      "id": "3",
+      "productName": "PIXPRO FZ55-RD 16MP CMOS Sensor Digital Camera 5X Optical Zoom 28mm Wide Angl",
+      "productQuantity": 6,
+      "productDetails": "loremmmCamera...",
+      "productPrice": 12000,
+      "catId": 2,
+      "productimgUrl": "https://f.nooncdn.com/p/pnsku/N53402368A/45/_/1764242116/250adbee-69f6-46ec-811f-7d9548fd8c82.jpg?width=800"
+    },
+    {
+      "id": "4",
+      "productName": "Z 5 Mirrorless Digital Camera With 24-50mm Lens",
+      "productQuantity": 2,
+      "productDetails": "loremmmCamera...",
+      "productPrice": 12000,
+      "catId": 2,
+      "productimgUrl": "https://f.nooncdn.com/p/pnsku/N70095830V/45/_/1722051074/44b945da-d625-4629-82a2-b1606d8141c5.jpg?width=800"
+    },
+    {
+      "id": "TEWjSEfYtkA",
+      "productName": "samsung",
+      "productPrice": 5000,
+      "productQuantity": 10,
+      "productDetails": "Biggest selection of Mobile Phones in Egypt. Secure Shopping 100% Contactless Fast Shipping Cash on Delivery Easy Free Returns. Shop Now\n\n",
+      "productimgUrl": "https://images.fonearena.com/photos/albums/userpics/10004/lava-flair-p1i-na-1100x1100-imaea4bd7frm9hzp.jpeg",
+      "catId": 1
+    },
+    {
+      "id": "o92YEFfTGQo",
+      "productName": "lenevo",
+      "productPrice": 12000,
+      "productQuantity": 8,
+      "productDetails": "Discover a wide range of Lenovo laptops that cater to your every need, from gaming and productivity to portability and affordability. Browse now to …",
+      "productimgUrl": "https://th.bing.com/th/id/R.274812db8473a9eb60821a773632a36f?rik=%2bk2c12AnoRJakQ&pid=ImgRaw&r=0",
+      "catId": 3
+    }
+  ],
+  "users": [
+    {
+      "fname": "mona",
+      "lname": "ahmed",
+      "email": "mona@gmil.com",
+      "password": "12345678",
+      "id": "BrVImkIz1to"
+    },
+    {
+      "fname": "nama",
+      "lname": "ahmed",
+      "email": "ame2@gmail.com",
+      "password": "12234",
+      "id": "lDsJ4EbSrAM"
+    },
+    {
+      "id": "Vfa16SGrQII"
+    },
+    {
+      "id": "HWTDU4Hy-68"
+    },
+    {
+      "fname": "nama",
+      "lname": "ahmed",
+      "email": "ame2@gmail.com",
+      "password": "1234567",
+      "id": "GgLSgApyQII"
+    },
+    {
+      "fname": "nama",
+      "lname": "ahmed",
+      "email": "ame2@gmail.com",
+      "password": "111111",
+      "id": "Zk2nPadmHDE"
+    },
+    {
+      "fname": "nesma",
+      "lname": "amer",
+      "email": "ame2@gmail.com",
+      "password": "123456",
+      "id": "1kVOh8PUh4o"
+    },
+    {
+      "fname": "asma",
+      "lname": "amer",
+      "email": "asma2@gmail.com",
+      "password": "123456",
+      "id": "EujJBXDQ_DE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

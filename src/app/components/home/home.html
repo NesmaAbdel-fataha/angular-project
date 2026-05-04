@@ -1,0 +1,14 @@
+<p>home works!</p>
+//Reception data
+<h1>{{propStore.storeName}}</h1>
+<img [src]="propStore.storeLogo"/>
+<ul>
+@for(item of propStore.Branches ; track propStore.Branches){
+    <li>{{item}}</li>
+}
+
+</ul>
+<button class="btn btn-success" (click)="login()"[disabled]="isuserloggedin">logIn</button>
+<button class="btn btn-danger" (click)="logout()"[disabled]="!isuserloggedin">logOut</button>
+<!-- <app-product></app-product> -->
+ <app-signals></app-signals>

@@ -1,0 +1,48 @@
+<p>parent-component works!</p>
+<!-- search -->
+<input type="text" class="form-control" [(ngModel)]="searchInPerant"/> 
+  <p></p>
+
+<!-- product-list -->
+                    //step 5
+ <app-product (prdEvent)="addIncartInPerant($event)"  [filterProduct]="searchInPerant"></app-product>
+
+
+
+
+
+ <table class="table container">
+  <thead>
+    <tr>
+     
+      <th scope="col">Product_name</th>
+   
+      <th scope="col">Product_price</th>
+      
+      <th scope="col">Product_quntatiy</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (i of prdListInPerant; track i.id) {
+      <tr>
+      <td class="table-primary">{{i.productName}}</td>
+      <td class="table-secondary">{{i.productPrice}}</td>
+      <td class="table-info">{{i.productQuantity}}</td>
+      <td table-light><button class="bg-danger" (click)="dincrementQuntaty(i)">-</button></td>
+    </tr>
+    }
+    
+    <!-- <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr> -->
+  </tbody>
+</table>

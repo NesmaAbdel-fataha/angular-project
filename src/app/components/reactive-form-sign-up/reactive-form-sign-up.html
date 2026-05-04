@@ -1,0 +1,82 @@
+<p>reactive-form-sign-up works!</p>
+<div class="container mt-4">
+  <form [formGroup]="UserProp" (ngSubmit)="AddnewUser()">
+
+    <input type="text" class="form-control mb-2"
+      placeholder="First Name"
+      formControlName="fname">
+
+    @if (f['fname'].touched && f['fname'].invalid) {
+      <div class="text-danger">
+        @if (f['fname'].errors?.['required']) {
+          <small>Required</small>
+        }
+        @if (f['fname'].errors?.['minlength']) {
+          <small>Min 3 chars</small>
+        }
+      </div>
+    }
+
+    <input type="text" class="form-control mb-2"
+      placeholder="Last Name"
+      formControlName="lname">
+
+    @if (f['lname'].touched && f['lname'].invalid) {
+      <div class="text-danger">
+        @if (f['lname'].errors?.['required']) {
+          <small>Required</small>
+        }
+        @if (f['lname'].errors?.['minlength']) {
+          <small>Min 4 chars</small>
+        }
+      </div>
+    }
+
+    <input type="email" class="form-control mb-2"
+      placeholder="Email"
+      formControlName="email">
+
+    @if (f['email'].touched && f['email'].invalid) {
+      <div class="text-danger">
+        @if (f['email'].errors?.['required']) {
+          <small>Required</small>
+        }
+        @if (f['email'].errors?.['email']) {
+          <small>Invalid email</small>
+        }
+      </div>
+    }
+
+    <input type="password" class="form-control mb-2"
+      placeholder="Password"
+      formControlName="password">
+
+    @if (f['password'].touched && f['password'].invalid) {
+      <div class="text-danger">
+        @if (f['password'].errors?.['required']) {
+          <small>Required</small>
+        }
+        @if (f['password'].errors?.['minlength']) {
+          <small>Min 6 chars</small>
+        }
+      </div>
+    }
+
+    <input type="password" class="form-control mb-2"
+      placeholder="Confirm Password"
+      formControlName="confirmPassword">
+
+    @if (UserProp.errors?.['passwordMismatch'] && f['confirmPassword'].touched) {
+      <div class="text-danger">
+        Passwords do not match
+      </div>
+    }
+
+    <button class="btn btn-success w-100 mt-3"
+      type="submit"
+      [disabled]="UserProp.invalid">
+      Sign Up
+    </button>
+
+  </form>
+</div> 

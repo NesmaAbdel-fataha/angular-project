@@ -1,0 +1,63 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="text-center mb-4">{{ isEditMode ? 'Edit Product' : 'Insert Product' }}</h2>
+
+      <form [formGroup]="insertProductForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="productName" class="form-label">Product Name</label>
+          <input type="text" class="form-control" id="productName" formControlName="productName">
+          @if (f['productName'].touched && f['productName'].invalid) {
+            <small class="text-danger">Product name is required</small>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label for="catId" class="form-label">Category</label>
+          <select class="form-select" id="catId" formControlName="catId">
+            <option [ngValue]="''">Select category</option>
+            @for (category of categories; track category.id) {
+              <option [ngValue]="category.id">{{ category.name }}</option>
+            }
+          </select>
+          @if (f['catId'].touched && f['catId'].invalid) {
+            <small class="text-danger">Category is required</small>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label for="productPrice" class="form-label">Price</label>
+          <input type="number" class="form-control" id="productPrice" formControlName="productPrice">
+          @if (f['productPrice'].touched && f['productPrice'].invalid) {
+            <small class="text-danger">Price must be more than 0</small>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label for="productQuantity" class="form-label">Quantity</label>
+          <input type="number" class="form-control" id="productQuantity" formControlName="productQuantity">
+          @if (f['productQuantity'].touched && f['productQuantity'].invalid) {
+            <small class="text-danger">Quantity is required</small>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label for="productimgUrl" class="form-label">Image Url</label>
+          <input type="text" class="form-control" id="productimgUrl" formControlName="productimgUrl">
+        </div>
+
+        <div class="mb-3">
+          <label for="productDetails" class="form-label">Details</label>
+          <textarea class="form-control" id="productDetails" rows="3" formControlName="productDetails"></textarea>
+          @if (f['productDetails'].touched && f['productDetails'].invalid) {
+            <small class="text-danger">Product details are required</small>
+          }
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100" [disabled]="insertProductForm.invalid">
+          {{ isEditMode ? 'Update Product' : 'Add Product' }}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
