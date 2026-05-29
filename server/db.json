@@ -3,11 +3,11 @@
     {
       "id": "1",
       "productName": "PIXPRO FZ55-RD 16MP CMOS Sensor Digital Camera 5X Optical Zoom 28mm Wide Angl",
-      "productQuantity": 6,
-      "productDetails": "loremmmCamera...",
       "productPrice": 12000,
-      "catId": 2,
-      "productimgUrl": "https://f.nooncdn.com/p/pnsku/N70169880V/45/_/1764242398/285a54f6-256c-442e-a2e8-e766bfdfd767.jpg?width=800"
+      "productQuantity": 9,
+      "productDetails": "loremmmCamera...",
+      "productimgUrl": "https://f.nooncdn.com/p/pnsku/N70169880V/45/_/1764242398/285a54f6-256c-442e-a2e8-e766bfdfd767.jpg?width=800",
+      "catId": 2
     },
     {
       "id": "2",
@@ -28,15 +28,6 @@
       "productimgUrl": "https://f.nooncdn.com/p/pnsku/N53402368A/45/_/1764242116/250adbee-69f6-46ec-811f-7d9548fd8c82.jpg?width=800"
     },
     {
-      "id": "4",
-      "productName": "Z 5 Mirrorless Digital Camera With 24-50mm Lens",
-      "productQuantity": 2,
-      "productDetails": "loremmmCamera...",
-      "productPrice": 12000,
-      "catId": 2,
-      "productimgUrl": "https://f.nooncdn.com/p/pnsku/N70095830V/45/_/1722051074/44b945da-d625-4629-82a2-b1606d8141c5.jpg?width=800"
-    },
-    {
       "id": "TEWjSEfYtkA",
       "productName": "samsung",
       "productPrice": 5000,
@@ -52,6 +43,15 @@
       "productQuantity": 8,
       "productDetails": "Discover a wide range of Lenovo laptops that cater to your every need, from gaming and productivity to portability and affordability. Browse now to …",
       "productimgUrl": "https://th.bing.com/th/id/R.274812db8473a9eb60821a773632a36f?rik=%2bk2c12AnoRJakQ&pid=ImgRaw&r=0",
+      "catId": 3
+    },
+    {
+      "id": "9ZkHdraFWXY",
+      "productName": "laptop",
+      "productPrice": 3000,
+      "productQuantity": 7,
+      "productDetails": "nnnk",
+      "productimgUrl": "https://tse1.mm.bing.net/th/id/OIP.zPC2oTqPK3HQv0M4Bp8tNwHaFy?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
       "catId": 3
     }
   ],
@@ -103,6 +103,13 @@
       "email": "asma2@gmail.com",
       "password": "123456",
       "id": "EujJBXDQ_DE"
+    },
+    {
+      "fname": "nesma",
+      "lname": "amer",
+      "email": "nesma1amer@gmail.com",
+      "password": "123456",
+      "id": "mgkgrvbrUhM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
